@@ -28,7 +28,7 @@ export class HomeComponent extends React.Component<Props, State> {
   public render() {
     return (
       <>
-        <div>{this.props.title}</div>
+        <div data-attr={'test'}>{this.props.title}</div>
         <label>Update Title
           <input type={'text'} name={'title'} value={this.state.title} onChange={this.handleInputChange} />
         </label>
