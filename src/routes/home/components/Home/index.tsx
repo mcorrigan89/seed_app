@@ -1,2 +1,2 @@
-import { HomeComponent } from './home';
-export { HomeComponent };
+import { HomeComponent, Props } from './home';
+export { HomeComponent, Props };

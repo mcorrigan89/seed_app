@@ -1,12 +1,13 @@
-import * as Enzyme from 'enzyme';
+import { setUpTestsWithDOM } from '@tests/setup';
+const Enzyme = setUpTestsWithDOM();
 import * as React from 'react';
-const Adapter = require('enzyme-adapter-react-16');
+import { Actions } from '../../module/actions';
 
-Enzyme.configure({ adapter: new Adapter() });
-
-import { HomeComponent } from './index';
+import { HomeComponent } from '@routes/home/components/Home';
 
 it('HomeComponent', () => {
-    const result = Enzyme.shallow(<HomeComponent />).contains(<div>Hello Home</div>);
-    expect(result).toBeTruthy();
+    const result = Enzyme.mount(<HomeComponent title={'Flerp'} clearTitle={Actions.clearTitle}/>);
+    expect(result.props().title).toEqual('Flerp');
+    result.setProps({ title: 'Derp'});
+    expect(result.props().title).toEqual('Derp');
 });

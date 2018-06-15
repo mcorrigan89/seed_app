@@ -26,6 +26,7 @@ module.exports = {
     },
   },
   moduleNameMapper: {
+    '@tests/(.*)': `${projectRoot}/tests/$1`,
     '@components/(.*)': `${projectSource}/components/$1`,
     '@helpers/(.*)': `${projectSource}/helpers/$1`,
     '@interfaces/(.*)': `${projectSource}/interfaces/$1`,

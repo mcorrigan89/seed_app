@@ -4,7 +4,7 @@ import * as Loadable from 'react-loadable';
 const Loading = () => <div>Loading...</div>;
 
 export const LoadableHome = Loadable({
-  loader: () => import('@routes/home/components/Home'),
+  loader: () => import('@routes/home/containers/HomeContainer'),
   loading: Loading,
-  render: ({ HomeComponent }) => <HomeComponent />
+  render: ({ HomeContainer }) => <HomeContainer />
 });

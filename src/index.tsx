@@ -1,15 +1,13 @@
-import { configureStore } from '@store/store';
+import { configureStore, history } from '@store/store';
 import { ConnectedRouter } from 'connected-react-router';
 import { injectGlobal } from 'emotion';
-import { createBrowserHistory } from 'history';
 import * as  React from 'react';
 import * as ReactDOM from 'react-dom';
 import { hot } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import { Router } from 'Router';
 
-export const history = createBrowserHistory();
-export const store = configureStore(history);
+export const store = configureStore({ home: { title: 'Derp '}});
 
 injectGlobal({
   'html, body': {
@@ -24,7 +22,7 @@ injectGlobal({
 });
 
 const App: React.SFC<{}> = hot(module)(() => (
-  <Provider store={store({ home: { title: 'Derp '}})}>
+  <Provider store={store}>
     <ConnectedRouter history={history}>
       <Router />
     </ConnectedRouter>
