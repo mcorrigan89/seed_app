@@ -1,7 +1,7 @@
-import { createStore, applyMiddleware, compose } from 'redux';
-import { logger } from 'redux-logger';
-import { routerMiddleware, connectRouter } from 'connected-react-router';
+import { connectRouter, routerMiddleware } from 'connected-react-router';
 import { History } from 'history';
+import { applyMiddleware, compose, createStore } from 'redux';
+import { logger } from 'redux-logger';
 
 import { rootReducer, RootState } from '@store/rootReducer';
 

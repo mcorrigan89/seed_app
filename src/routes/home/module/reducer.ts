@@ -14,6 +14,8 @@ export const reducer: Reducer<HomeState, RootActions> = (state = initialState, a
   switch (action.type) {
     case ActionTypes.UPDATE_TITLE:
       return { ...state, title: action.payload };
+    case ActionTypes.CLEAR_TITLE:
+      return { ...state, title: '' };
     default:
       return state;
   }

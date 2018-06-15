@@ -1,11 +1,11 @@
+import { configureStore } from '@store/store';
+import { ConnectedRouter } from 'connected-react-router';
+import { injectGlobal } from 'emotion';
+import { createBrowserHistory } from 'history';
 import * as  React from 'react';
 import * as ReactDOM from 'react-dom';
 import { hot } from 'react-hot-loader';
-import { injectGlobal } from 'emotion';
 import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'connected-react-router';
-import { createBrowserHistory } from 'history';
-import { configureStore } from '@store/store';
 import { Router } from 'Router';
 
 export const history = createBrowserHistory();

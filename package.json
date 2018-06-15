@@ -7,7 +7,8 @@
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.config.dev.js",
     "build": "webpack --config config/webpack.config.prod.js",
-    "test": "jest --detectOpenHandles --no-cache --config config/jest.config.js"
+    "test": "jest --detectOpenHandles --no-cache --config config/jest.config.js",
+    "lint": "tslint --project tsconfig.json --fix"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.10",
@@ -38,6 +39,7 @@
     "ts-loader": "^4.4.1",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
     "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.13.0",
     "tslint-react": "^3.6.0",
     "typescript": "^2.9.1",
     "uglifyjs-webpack-plugin": "^1.2.5",

@@ -6,4 +6,8 @@ describe('home actions', () => {
   test('updateTitle', () => {
     expect(Actions.updateTitle('fizz buzz')).toEqual({ type: ActionTypes.UPDATE_TITLE, payload: 'fizz buzz' });
   });
+
+  test('clearTitle', () => {
+    expect(Actions.clearTitle()).toEqual({ type: ActionTypes.CLEAR_TITLE });
+  });
 });

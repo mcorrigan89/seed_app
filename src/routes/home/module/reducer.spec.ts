@@ -16,6 +16,12 @@ describe('home reducer', () => {
     expect(state).toEqual({ title: `I've been updated!` });
   });
 
+  test('CLEAR_TITLE', () => {
+    let state;
+    state = combinedReducers({ title: 'Hello World' }, { type: ActionTypes.CLEAR_TITLE });
+    expect(state).toEqual({ title: `` });
+  });
+
   test('NONE', () => {
     let state;
     state = combinedReducers({ title: 'Hello World' }, { type: 'NONE', payload: `I've been updated!` });
