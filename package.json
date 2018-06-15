@@ -6,10 +6,12 @@
   "license": "MIT",
   "scripts": {
     "start": "NODE_ENV=debug webpack-dev-server --config config/webpack.config.dev.js",
+    "prebuild": "npm run lint && npm run test",
     "build": "webpack --config config/webpack.config.prod.js",
-    "test": "jest --detectOpenHandles --no-cache --config config/jest.config.js",
-    "test-update": "jest --updateSnapshot --config config/jest.config.js",
-    "test-debug": "NODE_ENV=debug jest --detectOpenHandles --no-cache --config config/jest.config.js",
+    "test": "jest spec --detectOpenHandles --no-cache --config config/jest.config.js",
+    "test-update": "jest spec --updateSnapshot --config config/jest.config.js",
+    "test-debug": "NODE_ENV=debug jest spec --detectOpenHandles --no-cache --config config/jest.config.js",
+    "e2e": "jest e2e --coverage=false --detectOpenHandles --no-cache --config config/jest.config.js",
     "lint": "tslint --project tsconfig.json --fix"
   },
   "devDependencies": {

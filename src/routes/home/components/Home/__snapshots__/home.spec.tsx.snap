@@ -3,6 +3,7 @@
 exports[`HomeComponent Should match snapshot 1`] = `
 Array [
   <div
+    className="css-5zsq25"
     data-attr="test"
   >
     Flerp

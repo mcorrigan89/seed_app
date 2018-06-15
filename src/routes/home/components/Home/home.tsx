@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { styles } from './styles';
 import { Actions } from '@routes/home/module/actions';
 
 export interface Props {
@@ -28,7 +29,7 @@ export class HomeComponent extends React.Component<Props, State> {
   public render() {
     return (
       <>
-        <div data-attr={'test'}>{this.props.title}</div>
+        <div data-attr={'test'} className={styles.title}>{this.props.title}</div>
         <label>Update Title
           <input type={'text'} name={'title'} value={this.state.title} onChange={this.handleInputChange} />
         </label>

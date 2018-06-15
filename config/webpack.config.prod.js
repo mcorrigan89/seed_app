@@ -111,4 +111,7 @@ module.exports = {
       tslint: tsLint,
     }),
   ],
+  performance: {
+    hints: false
+  }
 }
