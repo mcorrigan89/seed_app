@@ -7,7 +7,7 @@
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.config.dev.js",
     "build": "webpack --config config/webpack.config.prod.js",
-    "test": "jest --forceExit --no-cache --config config/jest.config.js"
+    "test": "jest --detectOpenHandles --no-cache --config config/jest.config.js"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.10",

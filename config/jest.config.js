@@ -11,7 +11,10 @@ module.exports = {
     },
   },
   collectCoverage: true,
-  collectCoverageFrom: [`**/routes/**/*.{ts,tsx}`],
+  collectCoverageFrom: [
+    `**/routes/**/*.{ts,tsx}`,
+    `!**/routes/**/index.{ts,tsx}`
+  ],
   coverageReporters: ['json', 'lcov', 'text'],
   coverageDirectory: `${projectRoot}/test_reports/`,
   globals: {
@@ -32,7 +35,6 @@ module.exports = {
   rootDir: projectRoot,
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   transform: {
-    // '^.+\\.(scss?)$': `${APP_ROOT}/node_modules/jest-css-modules`,
     '^.+\\.(tsx?)$': `${projectRoot}/node_modules/ts-jest/preprocessor.js`,
   },
   testMatch: [`${projectRoot}/src/**/*.spec.(ts|js|tsx|jsx)`],
