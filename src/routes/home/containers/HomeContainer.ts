@@ -9,6 +9,7 @@ const mapStateToProps = ({ home }: RootState) => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch<RootActions>) => ({
+  updateTitle: (title: string) => dispatch(Actions.updateTitle(title)),
   clearTitle: () => dispatch(Actions.clearTitle())
 });
 

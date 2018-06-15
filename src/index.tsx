@@ -7,7 +7,7 @@ import { hot } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import { Router } from 'Router';
 
-export const store = configureStore({ home: { title: 'Derp '}});
+export const store = configureStore({ home: { title: 'Derp' }});
 
 injectGlobal({
   'html, body': {

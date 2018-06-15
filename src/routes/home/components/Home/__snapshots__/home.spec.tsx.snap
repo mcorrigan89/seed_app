@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeComponent Should match snapshot 1`] = `
+Array [
+  <div>
+    Flerp
+  </div>,
+  <label>
+    Update Title
+    <input
+      name="title"
+      onChange={[Function]}
+      type="text"
+      value="Flerp"
+    />
+  </label>,
+  <button
+    onClick={[Function]}
+  >
+    Update
+  </button>,
+]
+`;
