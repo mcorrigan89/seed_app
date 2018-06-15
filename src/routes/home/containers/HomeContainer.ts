@@ -1,8 +1,8 @@
 import { connect, Dispatch } from 'react-redux';
 import { RootActions } from '@store/actions';
 import { RootState } from '@store/rootReducer';
-import { HomeComponent } from '../components/Home';
-import { Actions } from '../module/actions';
+import { HomeComponent } from '@routes/home/components/Home';
+import { Actions } from '@routes/home/module/actions';
 
 const mapStateToProps = ({ home }: RootState) => ({
   title: home.title

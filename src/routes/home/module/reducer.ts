@@ -2,7 +2,7 @@ import { RootActions } from '@store/actions';
 import { Reducer } from 'redux';
 // import reduceReducers from 'reduce-reducers';
 
-import { ActionTypes } from './actions';
+import { ActionTypes } from '@routes/home/module/actions';
 
 export interface HomeState {
   title: string; 

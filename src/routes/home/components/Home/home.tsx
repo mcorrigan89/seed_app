@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Actions } from '../../module/actions';
+import { Actions } from '@routes/home/module/actions';
 
 export interface Props {
   title: string;

@@ -30,3 +30,13 @@ export const setUpTestsWithDOM = () => {
   copyProps(window, global);
   return Enzyme;
 };
+
+export const isDebuggingPuppeteer = () => {
+  const debugMode = {
+    headless: false,
+    slowMo: 250,
+    devtools: true
+  };
+
+  return process.env.NODE_ENV === 'debug' ? debugMode : {};
+};

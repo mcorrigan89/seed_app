@@ -38,6 +38,9 @@ module.exports = {
   transform: {
     '^.+\\.(tsx?)$': `${projectRoot}/node_modules/ts-jest/preprocessor.js`,
   },
-  testMatch: [`${projectRoot}/src/**/*.spec.(ts|js|tsx|jsx)`],
+  testMatch: [
+    `${projectRoot}/src/**/*.e2e.(ts|js|tsx|jsx)`,
+    `${projectRoot}/src/**/*.spec.(ts|js|tsx|jsx)`
+  ],
   testEnvironment: 'node',
 };
