@@ -19,13 +19,10 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "declaration": false,
-    "allowSyntheticDefaultImports": true,
+    "allowSyntheticDefaultImports": false,
     "experimentalDecorators": true,
     "paths": {
       "@components/*": ["components/*"],
-      "@guestComponents/*": ["routes/guest/components/*"],
-      "@theme/*": ["routes/guest/theme/*"],
-      "@fonts/*": ["routes/guest/fonts/*"],
       "@helpers/*": ["helpers/*"],
       "@interfaces/*": ["interfaces/*"],
       "@routes/*": ["routes/*"],
@@ -33,6 +30,7 @@
     }
   },
   "exclude": [
+    "src/**/*.spec.ts",
     "node_modules",
     "build",
     "scripts",

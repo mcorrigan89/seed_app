@@ -1,6 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as  React from 'react';
+import * as ReactDOM from 'react-dom';
+import { hot } from 'react-hot-loader';
 import { injectGlobal } from 'emotion';
+import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'connected-react-router';
+import { createBrowserHistory } from 'history';
+import { configureStore } from '@store/store';
+import { Router } from 'Router';
+
+export const history = createBrowserHistory();
+export const store = configureStore(history);
 
 injectGlobal({
   'html, body': {
@@ -14,7 +23,13 @@ injectGlobal({
   }
 });
 
-const App: React.SFC<{}> = () => <div>Hello World!</div>;
+const App: React.SFC<{}> = hot(module)(() => (
+  <Provider store={store({ home: { title: 'Derp '}})}>
+    <ConnectedRouter history={history}>
+      <Router />
+    </ConnectedRouter>
+  </Provider>
+));
 
 ReactDOM.render(
   <App />,

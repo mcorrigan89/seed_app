@@ -1,18 +1,18 @@
 const reactVendor = [
   'react', 
   'react-dom', 
-  // 'react-router', 
-  // 'react-router-dom', 
-  // 'react-redux', 
-  // 'connected-react-router'
+  'react-router', 
+  'react-router-dom', 
+  'react-redux', 
+  'connected-react-router'
 ];
 
 const vendorList = [
-  // 'redux',
-  // 'reduce-reducers',
-  // 'redux-logger',
+  'redux',
+  'reduce-reducers',
+  'redux-logger',
   'emotion',
-  // 'rxjs',
+  'rxjs',
   // 'lodash-es'
 ];
 
